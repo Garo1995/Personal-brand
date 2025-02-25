@@ -73,7 +73,11 @@ $('.menu-scroll a').click(function() {
 let specialistsSwiper = new Swiper(".service-slider", {
     slidesPerView: 4,
     spaceBetween: 20,
-    loop: true,
+    speed: 1500,
+    autoplay: {
+        delay: 1500,
+        disableOnInteraction: false,
+    },
     breakpoints: {
         '991': {
             slidesPerView: 4,
@@ -82,9 +86,11 @@ let specialistsSwiper = new Swiper(".service-slider", {
         '767': {
             slidesPerView: 3,
             spaceBetween: 10,
+            loop: true,
         },
 
         '320': {
+            loop: true,
             slidesPerView: 3,
             slidesPerGroup: 1,
             spaceBetween: 16,
@@ -126,6 +132,12 @@ let assistantSwiper = new Swiper(".assistant-slider", {
     slidesPerView: 3,
     spaceBetween: 20,
     loop: true,
+    speed: 1500,
+
+    autoplay: {
+        delay: 1500,
+        disableOnInteraction: false,
+    },
 });
 
 
@@ -138,13 +150,15 @@ let usersSwiper = new Swiper(".users-slider", {
     direction: "vertical",
     slidesPerView: 3,
     spaceBetween: 12,
-    mousewheel: true,
+    mousewheel: false,
     speed: 1200,
     autoplay: {
         delay: 1500,
         disableOnInteraction: false,
     },
-
+    grabCursor: true,
+    mousewheelControl: true,
+    keyboardControl: true,
     breakpoints: {
 
         '991': {
@@ -181,5 +195,24 @@ let usersSwiper = new Swiper(".users-slider", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
+    on: {
+        init() {
+            this.el.addEventListener('mouseenter', () => {
+                this.autoplay.stop();
+            });
 
+            this.el.addEventListener('mouseleave', () => {
+                this.autoplay.start();
+            });
+        }
+    },
 });
+
+
+
+
+
+
+
+
+

@@ -180,6 +180,9 @@ p{
     margin-top: 5px;
     margin-right: 9px;
 }
+.service-pic-abs img{
+    width: 153px;
+}
 .audience-name{
     max-width: 185px;
     width: 100%;
@@ -287,6 +290,9 @@ p{
     border-radius: 20px;
     padding: 28px;
 
+}
+.about-network-box img{
+    width: 52px;
 }
 .about-network-box h3{
     margin-top: 32px;
@@ -565,6 +571,9 @@ p{
     margin-bottom: 16px;
     gap: 12px;
 }
+.assistant-name img{
+    width: 48px;
+}
 .assistant-name span{
     color: rgba(36, 40, 52, 1);
     font-weight: 600;
@@ -634,6 +643,12 @@ p{
     }
     .assistant-btn{
         display: none;
+    }
+}
+@media (max-width: 991px){
+    .assistant-name span{
+        font-size: 22px;
+        line-height: 26px;
     }
 }
 
@@ -757,6 +772,7 @@ p{
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 11;
+    border-radius: 20px 20px 0 0;
 }
 .our-users-rel:after{
     content: "";
@@ -769,10 +785,15 @@ p{
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 11;
+    border-radius:  0 0 20px 20px;
+
 }
 .users-slider{
     height: 528px;
 
+}
+.users-slider .cart-for-mob{
+    display: none!important;
 }
 .swiper-pagination{
     display: none;
@@ -964,9 +985,17 @@ p{
         gap: 28px;
         margin-top: 32px;
     }
+    .users-slider .cart-for-mob{
+        display: block!important;
+    }
 
 }
-
+@media (max-width: 570px){
+    .our-users-box {
+        max-width: 380px;
+        margin: 0 auto;
+    }
+}
 
 
 
@@ -1002,6 +1031,7 @@ p{
 }
 .submenu p{
     padding-right: 60px;
+    padding-bottom: 16px;
 }
 .open-accordion{
     max-width: 48px;
@@ -1027,6 +1057,15 @@ p{
 .open .open-accordion:before{
     transform: rotate(45deg);
 }
+.open .open-accordion{
+    background: rgba(109, 60, 241, 1);
+}
+.open-accordion:hover{
+    background: rgba(109, 60, 241, 1);
+}
+.accordion-box:hover .open-accordion{
+    background: rgba(109, 60, 241, 1);
+}
 @media (max-width: 991px){
     .accordion-cnt{
         margin-top: 48px;
@@ -1045,6 +1084,10 @@ p{
     }
     .accordion-click{
         align-items: flex-start;
+    }
+    .submenu p{
+        padding-right: 0px;
+        padding-bottom: 12px;
     }
 }
 
@@ -1116,6 +1159,7 @@ footer:after{
     background-image: url("../img/footer-fon.png");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center top;
     width: 100%;
     height: 100px;
 }
@@ -1133,8 +1177,12 @@ footer:after{
     text-align: center;
 }
 
-
-
+.footer-menu ul{
+    gap: 24px;
+}
+.footer-menu ul li a{
+    font-weight: 400;
+}
 @media (max-width: 991px) {
     footer:after {
         height: 70px;

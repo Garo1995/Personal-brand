@@ -88,8 +88,7 @@ header{
     z-index: 11;
     transition: 0.3s;
     backdrop-filter: blur(6px);
-    background: #00000066;
-
+    background: rgba(0, 0, 0, 0.4);
 }
 
 .menu-mobile .glob-tit-name{
