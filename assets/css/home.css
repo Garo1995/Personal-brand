@@ -790,10 +790,6 @@ p{
 }
 .users-slider{
     height: 528px;
-
-}
-.users-slider .cart-for-mob{
-    display: none!important;
 }
 .swiper-pagination{
     display: none;
